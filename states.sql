@@ -24,8 +24,8 @@ DROP TABLE IF EXISTS `states`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `states` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `abbr` varchar(2) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
+  `abbr` char(2) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
+  `name` varchar(20) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `abbr` (`abbr`),
   UNIQUE KEY `name` (`name`)
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-12-15  0:04:07
+-- Dump completed on 2011-12-15  9:19:16

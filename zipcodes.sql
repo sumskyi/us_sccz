@@ -24,8 +24,8 @@ DROP TABLE IF EXISTS `zipcodes`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `zipcodes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `code` varchar(255) DEFAULT NULL,
-  `city` varchar(255) DEFAULT NULL,
+  `code` char(5) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+  `city` varchar(32) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
   `state_id` int(11) DEFAULT NULL,
   `county_id` int(11) DEFAULT NULL,
   `lat` decimal(15,10) DEFAULT NULL,
@@ -59,4 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-12-15  0:05:31
+-- Dump completed on 2011-12-15  9:19:22

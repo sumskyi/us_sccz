@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `counties`;
 CREATE TABLE `counties` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `state_id` int(11) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
+  `name` varchar(22) CHARACTER SET latin1 COLLATE latin1_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `index_counties_on_name` (`name`),
   KEY `index_counties_on_state_id` (`state_id`)
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-12-15  0:04:56
+-- Dump completed on 2011-12-15  9:18:59
